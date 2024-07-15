@@ -19,11 +19,11 @@
   <Card.Root class="p-28">
     <Card.Content>
       <div class="flex flex-col items-center">
-        <Button class="my-2">
+        <Button class="my-2 p-[1.em]">
           <Mail class="mr-2 h-4 w-4" />
           Login with @kmitl.ac.th
         </Button>
-        <p class="text-sm text-muted-foreground">Please use KMITL email to Sign in</p>
+        <p class="text-base text-muted-foreground">Please use KMITL email to Sign in</p>
       </div>
     </Card.Content>
   </Card.Root>
