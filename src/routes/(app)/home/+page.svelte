@@ -8,6 +8,7 @@
 
   // import components
   import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
+  import Cardprojects from "$lib/components/custom/card-projects.svelte";
 
   // SVG Icons
   import { Plus } from "lucide-svelte";
@@ -60,7 +61,11 @@
           </form>
         </Card.Header>
         <Card.Content>
+          {#if projects === undefined}
           <EmptyProjects />
+          {:else}
+          <Cardprojects/>
+          {/if}
         </Card.Content>
       </Card.Root>
     </Tabs.Content>
