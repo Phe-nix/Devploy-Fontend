@@ -2,14 +2,12 @@
   // import shadcn-svelte
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Tabs from "$lib/components/ui/tabs";
-  import * as Command from "$lib/components/ui/command";
-  import { Button } from "$lib/components/ui/button/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
-  import Cardprojects from "$lib/components/custom/card-projects.svelte";
-
+  import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
+  import Cardprojects from "$lib/components/custom/Card-projects.svelte";
+  import ModalCreateProjects from "$lib/components/custom/Modal-create-projects.svelte"
   // SVG Icons
   import { Plus } from "lucide-svelte";
 
@@ -29,7 +27,7 @@
   ];
 </script>
 
-<div class="max-w-7xl mx-auto">
+<div>
   <div class="flex flex-col">
     <h2
       class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
@@ -54,17 +52,16 @@
               type="text"
               placeholder="🔍 Search something..."
             />
-            <Button class="space-x-2 flex items-center" type="submit">
-              <Plus class="mr-2 size-4" />
-              Create Projects
-            </Button>
+            <ModalCreateProjects/>
           </form>
         </Card.Header>
-        <Card.Content>
+        <Card.Content class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start">
           {#if projects === undefined}
           <EmptyProjects />
           {:else}
-          <Cardprojects/>
+          {#each projects as project}
+          <Cardprojects {project} service={{ name: "", time: "", linkGit: "", img: "" }}/>
+          {/each}
           {/if}
         </Card.Content>
       </Card.Root>
