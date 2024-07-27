@@ -7,7 +7,7 @@
   // import components
   import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
   import Cardprojects from "$lib/components/custom/Card-projects.svelte";
-  import ModalCreateProjects from "$lib/components/custom/Modal-create-projects.svelte"
+  import ModalCreateProjects from "$lib/components/custom/Modal-create-projects.svelte";
   // SVG Icons
   import { Plus } from "lucide-svelte";
 
@@ -52,16 +52,21 @@
               type="text"
               placeholder="🔍 Search something..."
             />
-            <ModalCreateProjects/>
+            <ModalCreateProjects />
           </form>
         </Card.Header>
-        <Card.Content class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start">
+        <Card.Content
+          class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
+        >
           {#if projects === undefined}
-          <EmptyProjects />
+            <EmptyProjects />
           {:else}
-          {#each projects as project}
-          <Cardprojects {project} service={{ name: "", time: "", linkGit: "", img: "" }}/>
-          {/each}
+            {#each projects as project}
+              <Cardprojects
+                {project}
+                service={{ name: "", time: "", linkGit: "", img: "" }}
+              />
+            {/each}
           {/if}
         </Card.Content>
       </Card.Root>
