@@ -44,9 +44,7 @@
   <Breadcrumb.Root>
     <Breadcrumb.List>
       <Breadcrumb.Item>
-        <Breadcrumb.Link asChild let:attrs>
-          <a href="/" {...attrs}>Projects</a>
-        </Breadcrumb.Link>
+        <Breadcrumb.Link href="/home">Projects</Breadcrumb.Link>
       </Breadcrumb.Item>
       <Breadcrumb.Separator />
       <Breadcrumb.Item>
