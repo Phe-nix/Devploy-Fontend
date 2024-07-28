@@ -5,10 +5,9 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import ModalCreateServices from "$lib/components/custom/Modal-create-services.svelte";
   import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
   import CardProjects from "$lib/components/custom/Card-projects.svelte";
-
+  import DropdownCreateService from "$lib/components/custom/Dropdown-create-service.svelte";
   // SVG Icons
 
   // let service = [
@@ -53,13 +52,13 @@
     </Breadcrumb.List>
   </Breadcrumb.Root>
 
-  <div class="py-6 flex justify-between">
+  <div class="py-6 flex justify-between items-center">
     <h2
       class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
     >
       Projects Name
     </h2>
-    <ModalCreateServices />
+    <DropdownCreateService />
   </div>
   <Card.Root>
     <Card.Header>
