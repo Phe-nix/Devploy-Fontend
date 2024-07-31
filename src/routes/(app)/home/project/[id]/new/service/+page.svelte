@@ -6,6 +6,7 @@
   // import components
   import GithubConnect from "$lib/components/custom/create-service/GithubConnect.svelte";
   import SelectRepo from "$lib/components/custom/create-service/SelectRepo.svelte";
+  import FormBuiltApp from "$lib/components/custom/create-service/FormBuiltApp.svelte";
 </script>
 
 <div class="py-2 flex flex-col">
@@ -26,7 +27,8 @@
     </Card.Header>
     <Card.Content class="py-10">
       <!-- <GithubConnect /> -->
-      <SelectRepo />
+      <!-- <SelectRepo /> -->
+      <FormBuiltApp />
     </Card.Content>
     <Card.Footer class="flex justify-between">
       <Button disabled>Back</Button>
