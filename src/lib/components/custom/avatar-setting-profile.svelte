@@ -19,19 +19,19 @@
       </Avatar.Root>
     </Button>
   </DropdownMenu.Trigger>
-  <DropdownMenu.Content align="start" class="w-56">
+  <DropdownMenu.Content align="start" class="w-56 ">
     <DropdownMenu.Label class="text-lg">My profile</DropdownMenu.Label>
     <DropdownMenu.Separator />
-    <DropdownMenu.Item class="flex flex-row gap-x-2">
+    <DropdownMenu.Item class="flex flex-row gap-x-2 cursor-pointer">
       <UserRound class="text-primary"/>
       Profile
     </DropdownMenu.Item>
-    <DropdownMenu.Item class="flex flex-row gap-x-2">
+    <DropdownMenu.Item class="flex flex-row gap-x-2 cursor-pointer">
         <Settings class="text-primary"/>
         Settings
     </DropdownMenu.Item>
     <DropdownMenu.Separator />
-    <DropdownMenu.Item class="text-destructive font-bold flex flex-row gap-x-2">
+    <DropdownMenu.Item href="/login" class="text-destructive font-bold flex flex-row gap-x-2 cursor-pointer">
       <LogOut />
       Sign out
     </DropdownMenu.Item>
