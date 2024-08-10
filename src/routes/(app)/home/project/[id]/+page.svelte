@@ -6,7 +6,7 @@
 
   // import components
   import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
-  import CardProjects from "$lib/components/custom/Card-projects.svelte";
+  import CardServicesDatabases from "$lib/components/custom/Card-services-databases.svelte";
   import DropdownCreateService from "$lib/components/custom/Dropdown-create-service.svelte";
   // SVG Icons
 
@@ -22,6 +22,7 @@
   let services = {
     app: [
       {
+        id: "1",
         name: "Zela-Frontend",
         time: "21",
         img: "https://github.com/Phe-nix.png",
@@ -31,9 +32,11 @@
     ],
     database: [
       {
+        id: "1",
         name: "Zela-database",
         time: "21",
         stack: "MongoDB",
+
       },
     ],
   };
@@ -84,7 +87,7 @@
             class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
           >
             {#each services.app as service}
-              <CardProjects type="service" {service} />
+              <CardServicesDatabases {service} />
             {/each}
           </div>
         </div>
@@ -98,7 +101,7 @@
             class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
           >
             {#each services.database as service}
-              <CardProjects type="service" {service} />
+              <CardServicesDatabases {service} />
             {/each}
           </div>
         </div>
