@@ -56,7 +56,7 @@
 				role="combobox"
 				aria-expanded={open}
 				aria-label="Select a team"
-				class={cn("w-[200px] justify-between", className)}
+				class={cn("md:w-[200px] justify-between w-[150px]", className)}
 			>
 				<Avatar.Root class="mr-2 h-5 w-5">
 					<Avatar.Image
