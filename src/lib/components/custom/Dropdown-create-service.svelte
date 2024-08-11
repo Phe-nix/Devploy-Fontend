@@ -26,7 +26,7 @@
         </a>
       </DropdownMenu.Item>
       <DropdownMenu.Item>
-        <a class="flex gap-3 items-center" href="/home/project/create-service">
+        <a class="flex gap-3 items-center" href="/home/project/1/new/database">
             <Database class="size-4" />
             Databases
         </a>
