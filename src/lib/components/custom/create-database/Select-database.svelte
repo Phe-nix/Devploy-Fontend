@@ -29,8 +29,11 @@
       img: "https://avatars.githubusercontent.com/u/4",
     },
   ];
-</script>
 
+  export let isSelectDatabase;
+  let selectData = "";
+
+</script>
 <Card.Root>
   <Card.Header>
     <Card.Title tag="h1" class="text-3xl">Databases</Card.Title>
@@ -38,9 +41,9 @@
   </Card.Header>
   <Card.Content class="py-6">
     <div class="flex gap-4 justify-center">
-      <ToggleGroup.Root variant="outline" size="xl" type="single" class="gap-6">
+      <ToggleGroup.Root bind:value={selectData} variant="outline" size="xl" type="single" class="gap-6 flex-col md:flex-row">
         {#each databases as { name, value, img }}
-          <ToggleGroup.Item {value}  aria-label={name} >
+          <ToggleGroup.Item {value}  aria-label={name}>
             <CardDatabases name={name} img={img} />
           </ToggleGroup.Item>
         {/each}
@@ -48,7 +51,11 @@
     </div>
   </Card.Content>
   <Card.Footer class="flex justify-between">
-    <Button disabled>Back</Button>
-    <Button disabled>Let Built</Button>
+    <Button on:click={() => {
+      window.history.back();
+    }}>Back</Button>
+    <Button disabled={selectData === ""} on:click={() => {
+      isSelectDatabase = true;
+    }}>Let Built</Button>
   </Card.Footer>
 </Card.Root>
