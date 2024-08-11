@@ -17,7 +17,7 @@
 >
   <div class="flex flex-row justify-between">
     <div class="flex flex-row items-center space-x-20">
-      <h1 class="text-2xl font-bold">Logo</h1>
+      <a href="/home" class="text-2xl font-bold">Logo</a>
       <Button variant="ghost" class="text-sm font-medium text-muted-foreground"
         >Docs</Button
       >
