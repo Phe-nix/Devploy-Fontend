@@ -7,17 +7,20 @@
   import GithubConnect from "$lib/components/custom/create-service/GithubConnect.svelte";
   import SelectRepo from "$lib/components/custom/create-service/SelectRepo.svelte";
   import FormBuiltApp from "$lib/components/custom/create-service/FormBuiltApp.svelte";
+
+  let isprivateRepo = false;
+  let isSignedInGithub = false;
 </script>
 
 <div class="py-2 flex flex-col">
   <h2
-    class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+    class="scroll-m-20 pb-2 text-xl md:text-3xl font-semibold tracking-tight transition-colors first:mt-0"
   >
     Let build something new.
   </h2>
   <p class="text-muted-foreground text-sm">to deploy service</p>
 </div>
-<div class="px-8 py-4">
+<div class="py-4 w-full">
   <Card.Root>
     <Card.Header>
       <Card.Title tag="h1">Import Application</Card.Title>
@@ -26,13 +29,21 @@
       >
     </Card.Header>
     <Card.Content class="py-10">
-      <!-- <GithubConnect /> -->
-      <!-- <SelectRepo /> -->
+      {#if !isSignedInGithub && !isprivateRepo}
+      <GithubConnect bind:isprivateRepo bind:isSignedInGithub/>
+      {:else if isprivateRepo && !isSignedInGithub}
       <FormBuiltApp />
+      {:else if isSignedInGithub || !isprivateRepo}
+      <SelectRepo />
+      {/if}
     </Card.Content>
     <Card.Footer class="flex justify-between">
       <Button disabled>Back</Button>
+      {#if isSignedInGithub || isprivateRepo} 
+      <Button>Let Built</Button>
+      {:else}
       <Button disabled>Let Built</Button>
+      {/if}
     </Card.Footer>
   </Card.Root>
 </div>
