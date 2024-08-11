@@ -6,6 +6,8 @@
   // import components
   import SelectDatabase from "$lib/components/custom/create-database/Select-database.svelte";
   import FormConfigDatabase from "$lib/components/custom/create-database/Form-config-database.svelte";
+
+  let isSelectDatabase = false;
 </script>
 
 <div class="py-2 flex flex-col">
@@ -16,7 +18,11 @@
   </h2>
   <p class="text-muted-foreground text-sm">to deploy service</p>
 </div>
-<div class="px-8 py-4">
-  <!-- <SelectDatabase /> -->
-  <FormConfigDatabase />
+<div class="py-4">
+  {#if !isSelectDatabase}
+  <SelectDatabase bind:isSelectDatabase/>
+  {:else}
+  <FormConfigDatabase bind:isSelectDatabase/>
+  {/if}
+  <!-- <FormConfigDatabase /> -->
 </div>
