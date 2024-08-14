@@ -11,21 +11,13 @@
 
 <Card.Root>
   <Card.Header>
-    <form class="flex flex-col w-full max-w-5xl mx-auto space-y-4">
-      <div class="flex justify-between">
-        <div>
-          <h2 class="text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-            Teams
-          </h2>
-          <p class="text-muted-foreground text-sm">Mannage your teams.</p>
-        </div>
-        <ModalCreateTeam />
-      </div>
+    <form class="flex w-full max-w-5xl mx-auto space-x-4">
       <Input
-        class="shadow-lg p-4"
-        type="text"
-        placeholder="🔍 Search something..."
+      class="shadow-lg p-4"
+      type="text"
+      placeholder="🔍 Search something..."
       />
+      <ModalCreateTeam />
     </form>
   </Card.Header>
   <Card.Content>
