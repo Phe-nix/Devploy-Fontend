@@ -41,11 +41,10 @@
 </div>
 
 <Tabs.Root value="projects" class="w-full py-6">
-  <Tabs.List class="grid w-full grid-cols-4">
+  <Tabs.List class="grid w-full grid-cols-3">
     <Tabs.Trigger value="projects">Projects</Tabs.Trigger>
-    <Tabs.Trigger value="password">Monitor</Tabs.Trigger>
-    <Tabs.Trigger value="password">Teams</Tabs.Trigger>
-    <Tabs.Trigger value="password">Setting</Tabs.Trigger>
+    <Tabs.Trigger value="monitor">Monitor</Tabs.Trigger>
+    <Tabs.Trigger value="setting">Setting</Tabs.Trigger>
   </Tabs.List>
   <Tabs.Content value="projects">
     <Card.Root>
