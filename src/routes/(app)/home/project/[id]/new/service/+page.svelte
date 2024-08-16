@@ -7,6 +7,7 @@
   import GithubConnect from "$lib/components/custom/create-service/GithubConnect.svelte";
   import SelectRepo from "$lib/components/custom/create-service/SelectRepo.svelte";
   import FormBuiltApp from "$lib/components/custom/create-service/FormBuiltApp.svelte";
+  import { goto } from "$app/navigation";
 
   let isprivateRepo = false;
   let isSignedInGithub = false;
@@ -34,13 +35,15 @@
       {:else if isprivateRepo && !isSignedInGithub}
       <FormBuiltApp />
       {:else if isSignedInGithub || !isprivateRepo}
-      <SelectRepo />
+      <SelectRepo/>
       {/if}
     </Card.Content>
     <Card.Footer class="flex justify-between">
       <Button disabled>Back</Button>
       {#if isSignedInGithub || isprivateRepo} 
-      <Button>Let Built</Button>
+      <Button on:click={() => {
+        goto("/home/project/1")
+      }}>Let Built</Button>
       {:else}
       <Button disabled>Let Built</Button>
       {/if}
