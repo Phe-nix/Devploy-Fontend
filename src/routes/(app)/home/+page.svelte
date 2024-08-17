@@ -5,11 +5,11 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
-  import Cardprojects from "$lib/components/custom/Card-projects.svelte";
-  import ModalCreateProjects from "$lib/components/custom/Modal-create-projects.svelte";
-  import TeamPage from "$lib/components/custom/tabs/teams/Team-page.svelte";
-  import SettingPage from "$lib/components/custom/setting-user/SettingPage.svelte";
+  import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
+  import Cardprojects from "$lib/components/custom/card-projects.svelte";
+  import ModalCreateProjects from "$lib/components/custom/modal-create-projects.svelte";
+  import TeamPage from "$lib/components/custom/tabs/teams/team-page.svelte";
+  import SettingPage from "$lib/components/custom/setting-user/settingPage.svelte";
 
   // SVG Icons
   import { Plus } from "lucide-svelte";

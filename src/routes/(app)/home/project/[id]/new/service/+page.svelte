@@ -4,9 +4,9 @@
   import { Button } from "$lib/components/ui/button/index.js";
 
   // import components
-  import GithubConnect from "$lib/components/custom/create-service/GithubConnect.svelte";
-  import SelectRepo from "$lib/components/custom/create-service/SelectRepo.svelte";
-  import FormBuiltApp from "$lib/components/custom/create-service/FormBuiltApp.svelte";
+  import GithubConnect from "$lib/components/custom/create-service/githubConnect.svelte";
+  import SelectRepo from "$lib/components/custom/create-service/selectRepo.svelte";
+  import FormBuiltApp from "$lib/components/custom/create-service/formBuiltApp.svelte";
   import { goto } from "$app/navigation";
 
   let isprivateRepo = false;

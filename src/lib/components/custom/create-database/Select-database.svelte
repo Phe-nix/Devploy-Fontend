@@ -5,7 +5,7 @@
   import * as ToggleGroup from "$lib/components/ui/toggle-group";
 
   // import components
-  import CardDatabases from "./Card-databases.svelte";
+  import CardDatabases from "./card-databases.svelte";
 
   let databases = [
     {

@@ -4,8 +4,8 @@
   import { Button } from "$lib/components/ui/button/index.js";
 
   // import components
-  import SelectDatabase from "$lib/components/custom/create-database/Select-database.svelte";
-  import FormConfigDatabase from "$lib/components/custom/create-database/Form-config-database.svelte";
+  import SelectDatabase from "$lib/components/custom/create-database/select-database.svelte";
+  import FormConfigDatabase from "$lib/components/custom/create-database/form-config-database.svelte";
 
   let isSelectDatabase = false;
 </script>

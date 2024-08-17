@@ -1,8 +1,8 @@
 <script lang="ts">
   // import components
-  import SelectTeam from "./Select-team.svelte";
+  import SelectTeam from "./select-team.svelte";
   import AvatartSettingProfile from "./avatar-setting-profile.svelte";
-  import DarkLightMode from "./Dark-light-mode.svelte";
+  import DarkLightMode from "./dark-light-mode.svelte";
 
   // import shadcn-svelte
   import { Button } from "$lib/components/ui/button";

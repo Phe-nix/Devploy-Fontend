@@ -5,9 +5,9 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import EmptyProjects from "$lib/components/custom/Emtpy-projects.svelte";
-  import CardServicesDatabases from "$lib/components/custom/Card-services-databases.svelte";
-  import DropdownCreateService from "$lib/components/custom/Dropdown-create-service.svelte";
+  import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
+  import CardServicesDatabases from "$lib/components/custom/card-services-databases.svelte";
+  import DropdownCreateService from "$lib/components/custom/dropdown-create-service.svelte";
   // SVG Icons
 
   // let service = [

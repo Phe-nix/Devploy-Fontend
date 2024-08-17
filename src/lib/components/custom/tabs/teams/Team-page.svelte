@@ -4,8 +4,8 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import ModalCreateTeam from "./ModalCreateTeam.svelte";
-  import CardTeams from "./Card-teams.svelte";
+  import ModalCreateTeam from "./modalCreateTeam.svelte";
+  import CardTeams from "./card-teams.svelte";
 
 </script>
 

@@ -3,8 +3,8 @@
   import * as Card from "$lib/components/ui/card";
 
   // import components
-  import Sidebar from "./Sidebar.svelte";
-  import Profile from "./page/Profile.svelte";
+  import Sidebar from "./sidebar.svelte";
+  import Profile from "./page/profile.svelte";
 
   let nowPageSide = "profile";
 

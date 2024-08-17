@@ -7,7 +7,7 @@
   import { Github } from "lucide-svelte";
 
   // import components
-  import BoxRepo from "./BoxRepo.svelte";
+  import BoxRepo from "./boxRepo.svelte";
 </script>
 
 <div class="flex flex-col px-5 space-y-2 items-center">

@@ -6,7 +6,7 @@
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
-  import ServicesStatus from "$lib/components/custom/Services-status.svelte";
+  import ServicesStatus from "$lib/components/custom/services-status.svelte";
 
   // import SVG
 
