@@ -2,6 +2,9 @@
   // shadcn-svelte
   import * as Avatar from "$lib/components/ui/avatar";
   import { Button } from "$lib/components/ui/button";
+
+  export let isSelectRepo;
+
 </script>
 
 <div
@@ -12,5 +15,7 @@
     <Avatar.Fallback>CN</Avatar.Fallback>
   </Avatar.Root>
   <p>Zela-fontend</p>
-  <Button class="absolute right-0 m-2 font-semibold">Import</Button>
+  <Button on:click={()=> {
+    isSelectRepo = true
+  }} class="absolute right-0 m-2 font-semibold">Import</Button>
 </div>

@@ -11,6 +11,7 @@
 
   let isprivateRepo = false;
   let isSignedInGithub = false;
+  let isSelectRepo = false;
 </script>
 
 <div class="py-2 flex flex-col">
@@ -32,10 +33,10 @@
     <Card.Content class="py-10">
       {#if !isSignedInGithub && !isprivateRepo}
       <GithubConnect bind:isprivateRepo bind:isSignedInGithub/>
-      {:else if isprivateRepo && !isSignedInGithub}
+      {:else if (isprivateRepo && !isSignedInGithub) || ((!isprivateRepo && isSignedInGithub) && isSelectRepo)}
       <FormBuiltApp />
       {:else if isSignedInGithub || !isprivateRepo}
-      <SelectRepo/>
+      <SelectRepo bind:isSelectRepo/>
       {/if}
     </Card.Content>
     <Card.Footer class="flex justify-between">

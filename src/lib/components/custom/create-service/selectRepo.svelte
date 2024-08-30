@@ -8,6 +8,8 @@
 
   // import components
   import BoxRepo from "./boxRepo.svelte";
+
+  export let isSelectRepo:any;
 </script>
 
 <div class="flex flex-col px-5 space-y-2 items-center">
@@ -20,11 +22,7 @@
     </div>
     <Input type="email" placeholder="Search Projects..." />
     <ScrollArea class="h-72 w-full rounded-md">
-      <BoxRepo />
-      <BoxRepo />
-      <BoxRepo />
-      <BoxRepo />
-      <BoxRepo />
+      <BoxRepo bind:isSelectRepo/>
     </ScrollArea>
     <!-- <div class="overflow-y-hidden max-h-[250px]">
       <BoxRepo />
