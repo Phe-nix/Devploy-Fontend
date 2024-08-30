@@ -11,8 +11,8 @@
   // import SVG
 
   // เดี๋ยวมาทำให้ดีกว่านี้55555555555
-  let thisroute = window.location.pathname;
-  let goBack = thisroute.split("/").slice(0, -2).join("/");
+  // let thisroute = window.location.pathname;
+  // let goBack = thisroute.split("/").slice(0, -2).join("/");
 </script>
 
 <div>
@@ -23,7 +23,7 @@
       </Breadcrumb.Item>
       <Breadcrumb.Separator />
       <Breadcrumb.Item>
-        <Breadcrumb.Link href="{goBack}">Project name</Breadcrumb.Link>
+        <Breadcrumb.Link href="/home/project/1">Project name</Breadcrumb.Link>
       </Breadcrumb.Item>
       <Breadcrumb.Separator />
       <Breadcrumb.Page>Zela</Breadcrumb.Page>

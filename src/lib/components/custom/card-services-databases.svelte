@@ -16,7 +16,6 @@
 
   export let service;
 
-  let thisroute = window.location.pathname;
 </script>
 
 <div class="relative">
@@ -48,7 +47,7 @@
   <button
     class="z-0"
     on:click={() => {
-      goto(`${thisroute}/services/${service.id}`);
+      goto(`/home/project/1/services/${service.id}`);
     }}
   >
     <div
