@@ -4,13 +4,19 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import { flyAndScale } from "$lib/utils";
 
+  import { cn } from "$lib/utils.js";
+
   // SVG Icons
-  import { Computer } from "lucide-svelte";
   import { Server } from "lucide-svelte";
   import { Database } from "lucide-svelte";
+  import { goto } from "$app/navigation";
+
+  let className = '';
+  export {className as class};
+  export let type;
 </script>
 
-<DropdownMenu.Root>
+<!-- <DropdownMenu.Root>
   <DropdownMenu.Trigger>
     <Button class="gap-3 font-normal">
       <Computer class="size-6" />
@@ -33,4 +39,22 @@
       </DropdownMenu.Item>
     </DropdownMenu.Group>
   </DropdownMenu.Content>
-</DropdownMenu.Root>
+</DropdownMenu.Root> -->
+
+{#if type == 'application'}
+<Button on:click={() => {
+  goto('/home/new/service')
+}} class={cn("gap-3 font-normal", className)}>
+  <Server class="size-6" />
+  Create Applications
+</Button>
+{:else if type == 'database'}
+<Button on:click={() => {
+  goto('/home/new/database')
+}} class={cn("gap-3 font-normal", className)}>
+  <Database class="size-6" />
+  Create Databases
+</Button>
+{:else}
+<div></div>
+{/if}
