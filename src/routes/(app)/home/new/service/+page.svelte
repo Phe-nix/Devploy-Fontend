@@ -43,7 +43,7 @@
       <Button disabled>Back</Button>
       {#if isSignedInGithub || isprivateRepo} 
       <Button on:click={() => {
-        goto("/home/project/1")
+        goto("/home")
       }}>Let Built</Button>
       {:else}
       <Button disabled>Let Built</Button>
