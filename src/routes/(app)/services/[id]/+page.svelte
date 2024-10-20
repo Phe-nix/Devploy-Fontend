@@ -19,7 +19,7 @@
   <Breadcrumb.Root>
     <Breadcrumb.List>
       <Breadcrumb.Item>
-        <Breadcrumb.Link href="/home">Projects</Breadcrumb.Link>
+        <Breadcrumb.Link href="/home/applications">Projects</Breadcrumb.Link>
       </Breadcrumb.Item>
       <Breadcrumb.Separator />
       <Breadcrumb.Page>Zela</Breadcrumb.Page>
