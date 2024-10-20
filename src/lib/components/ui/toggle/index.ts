@@ -13,6 +13,7 @@ export const toggleVariants = tv({
 			default: "h-10 px-3",
 			sm: "h-9 px-2.5",
 			lg: "h-11 px-5",
+			mg: "size-28 px-6 py-4",
 			xl: "size-32 px-6 py-4",
 		},
 	},
