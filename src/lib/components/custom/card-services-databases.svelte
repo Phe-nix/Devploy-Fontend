@@ -47,7 +47,7 @@
   <button
     class="z-0"
     on:click={() => {
-      goto(`/home/services/${service.id}`);
+      goto(`/services/${service.id}`);
     }}
   >
     <div
