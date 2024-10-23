@@ -5,6 +5,14 @@
 </script>
 
 <div class="grid space-y-5">
+  <div class="flex flex-col space-y-2">
+    <h4 class="scroll-m-20 text-2xl font-semibold tracking-tight">
+      Profile
+    </h4>
+    <p class="text-muted-foreground text-sm">
+      Edit your imformation profile.
+    </p>
+  </div>
   <Avatar.Root class="size-28">
     <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
     <Avatar.Fallback>CN</Avatar.Fallback>
