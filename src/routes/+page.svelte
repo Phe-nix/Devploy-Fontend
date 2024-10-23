@@ -19,7 +19,7 @@
   <Card.Root class="p-8 md:p-20">
     <Card.Content>
       <div class="flex flex-col items-center">
-        <Button href="/home" class="my-4 p-[1.5em]">
+        <Button href="/home/applications" class="my-4 p-[1.5em]">
           <Mail class="mr-2 h-4 w-4" />
           Login with @kmitl.ac.th
         </Button>
