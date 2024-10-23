@@ -3,6 +3,7 @@
   import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js";
   import * as Tabs from "$lib/components/ui/tabs";
   import * as Card from "$lib/components/ui/card/index.js";
+  import GeneralDetail from "$lib/components/custom/service-detail/general-detail.svelte";
   import { Input } from "$lib/components/ui/input/index.js";
 
   // import components
@@ -36,18 +37,24 @@
   </div>
 </div>
 
-<Tabs.Root value="projects" class="w-full py-6">
-  <Tabs.List class="grid w-full grid-cols-3">
-    <Tabs.Trigger value="projects">General</Tabs.Trigger>
-    <Tabs.Trigger value="monitor">Log</Tabs.Trigger>
+<Tabs.Root value="general" class="w-full py-6">
+  <Tabs.List class="grid w-full grid-cols-4">
+    <Tabs.Trigger value="general">General</Tabs.Trigger>
+    <Tabs.Trigger value="logs">Logs</Tabs.Trigger>
+    <Tabs.Trigger value="monitor">Monitor</Tabs.Trigger>
     <Tabs.Trigger value="setting">Setting</Tabs.Trigger>
   </Tabs.List>
-  <Tabs.Content value="projects">
+  <Tabs.Content value="general">
     <Card.Root>
-      <Card.Content
-        class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
-      >
-        Hi
+      <Card.Content>
+        <GeneralDetail/>
+      </Card.Content>
+    </Card.Root>
+  </Tabs.Content>
+  <Tabs.Content value="logs">
+    <Card.Root>
+      <Card.Content>
+        <GeneralDetail/>
       </Card.Content>
     </Card.Root>
   </Tabs.Content>

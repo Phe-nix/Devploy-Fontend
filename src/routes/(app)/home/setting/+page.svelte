@@ -5,7 +5,11 @@
   // import components
   import Sidebar from "$lib/components/custom/setting-user/sidebar.svelte";
   import Profile from "$lib/components/custom/setting-user/page/profile.svelte";
-  import Appearance from "$lib/components/custom/setting-user/appearance.svelte";
+  import Appearance from "$lib/components/custom/setting-user/page/appearance.svelte";
+  import Users from "$lib/components/custom/setting-user/page/data-table-users/users.svelte";
+  import DockerSwarms from "$lib/components/custom/setting-user/page/docker-swarms.svelte";
+  import { User } from "lucide-svelte";
+
   let nowPageSide = "profile";
 
   const sidebarNavItems = [
@@ -41,7 +45,11 @@
           {#if nowPageSide === "profile"}
             <Profile />
           {:else if nowPageSide === "appearance"}
-            <Appearance/>
+            <Appearance />
+          {:else if nowPageSide === "users"}
+            <Users />
+          {:else if nowPageSide === "docker swarms"}
+            <DockerSwarms/>
           {/if}
         </div>
       </div>
