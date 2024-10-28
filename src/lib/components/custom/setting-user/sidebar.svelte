@@ -15,10 +15,10 @@
   });
 
   let isActive: boolean = true;
-  let title: string = "Profile";
+  let title: string = nowPageSide;
   const active = (text: string) => {
     title = text;
-    nowPageSide = text.toLowerCase();
+    nowPageSide = text;
   };
 </script>
 

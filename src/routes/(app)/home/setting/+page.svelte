@@ -7,11 +7,11 @@
   import Profile from "$lib/components/custom/setting-user/page/profile.svelte";
   import Appearance from "$lib/components/custom/setting-user/page/appearance.svelte";
   import Users from "$lib/components/custom/setting-user/page/data-table-users/users.svelte";
-  import DockerSwarms from "$lib/components/custom/setting-user/page/docker-swarms.svelte";
+  import DockerSwarms from "$lib/components/custom/admin/cluster/docker-swarms.svelte";
   import { User } from "lucide-svelte";
   import Workspaces from "$lib/components/custom/setting-user/page/workspaces.svelte";
 
-  let nowPageSide = "profile";
+  let nowPageSide = "Profile";
 
   const sidebarNavItems = [
     {
@@ -47,13 +47,13 @@
           <Sidebar items={sidebarNavItems} bind:nowPageSide />
         </aside>
         <div class="flex-1 lg:max-w-4xl">
-          {#if nowPageSide === "profile"}
+          {#if nowPageSide === "Profile"}
             <Profile />
-          {:else if nowPageSide === "appearance"}
+          {:else if nowPageSide === "Appearance"}
             <Appearance />
-          {:else if nowPageSide === "users"}
+          {:else if nowPageSide === "Users"}
             <Users />
-          {:else if nowPageSide === "workspaces"}
+          {:else if nowPageSide === "Workspaces"}
             <Workspaces/>
           {/if}
         </div>
