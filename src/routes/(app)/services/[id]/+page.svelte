@@ -8,6 +8,9 @@
 
   // import components
   import ServicesStatus from "$lib/components/custom/services-status.svelte";
+  import Logs from "$lib/components/custom/service-detail/logs.svelte";
+  import Monitor from "$lib/components/custom/service-detail/monitor.svelte";
+  import Domain from "$lib/components/custom/service-detail/domain.svelte";
 
   // import SVG
 
@@ -33,7 +36,7 @@
     >
       Zela project
     </h2>
-    <ServicesStatus status="running"/>
+    <ServicesStatus status="running" />
   </div>
 </div>
 
@@ -42,21 +45,34 @@
     <Tabs.Trigger value="general">General</Tabs.Trigger>
     <Tabs.Trigger value="logs">Logs</Tabs.Trigger>
     <Tabs.Trigger value="monitor">Monitor</Tabs.Trigger>
-    <Tabs.Trigger value="setting">Setting</Tabs.Trigger>
+    <Tabs.Trigger value="domain">Domains</Tabs.Trigger>
   </Tabs.List>
   <Tabs.Content value="general">
     <Card.Root>
       <Card.Content>
-        <GeneralDetail/>
+        <GeneralDetail />
       </Card.Content>
     </Card.Root>
   </Tabs.Content>
   <Tabs.Content value="logs">
     <Card.Root>
       <Card.Content>
-        <GeneralDetail/>
+        <Logs />
       </Card.Content>
     </Card.Root>
   </Tabs.Content>
-  <Tabs.Content value="password">Change your password here.</Tabs.Content>
+  <Tabs.Content value="monitor">
+    <Card.Root>
+      <Card.Content>
+        <Monitor />
+      </Card.Content>
+    </Card.Root>
+  </Tabs.Content>
+  <Tabs.Content value="domain">
+    <Card.Root>
+      <Card.Content>
+        <Domain />
+      </Card.Content>
+    </Card.Root>
+  </Tabs.Content>
 </Tabs.Root>
