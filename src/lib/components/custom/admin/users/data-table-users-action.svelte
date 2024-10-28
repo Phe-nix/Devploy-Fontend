@@ -3,6 +3,6 @@
    </script>
     
     <div class="flex gap-4">
-        <Button>Edit</Button>
-        <Button variant="secondary">Delete</Button>
+        <Button size="sm">Edit</Button>
+        <Button size="sm" variant="secondary">Delete</Button>
     </div>
