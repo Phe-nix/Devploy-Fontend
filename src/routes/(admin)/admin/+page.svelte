@@ -1,5 +1,6 @@
 <script lang="ts">
   import Cluster from "$lib/components/custom/admin/cluster/cluster.svelte";
+  import SettingServer from "$lib/components/custom/admin/cluster/setting-server.svelte";
 import Users from "$lib/components/custom/admin/users/users.svelte";
 import Sidebar from "$lib/components/custom/setting-user/sidebar.svelte";
   import { Separator } from "$lib/components/ui/separator/index.js";
@@ -37,7 +38,7 @@ import Sidebar from "$lib/components/custom/setting-user/sidebar.svelte";
       {:else if nowPageSide === "Docker Swarms"}
         <Cluster/>
       {:else if nowPageSide === "Setting"}
-        3
+        <SettingServer/>
       {/if}
     </div>
   </div>

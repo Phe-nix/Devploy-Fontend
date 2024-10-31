@@ -2,6 +2,8 @@
   import * as Avatar from "$lib/components/ui/avatar/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
+
+  let username = "Phe-nix"
 </script>
 
 <div class="grid space-y-5">
@@ -10,19 +12,19 @@
       Profile
     </h4>
     <p class="text-muted-foreground text-sm">
-      Edit your imformation profile.
+      Show your imformation profile.
     </p>
   </div>
   <Avatar.Root class="size-28">
-    <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+    <Avatar.Image src="https://github.com/identicons/{username}.png" alt="@shadcn" />
     <Avatar.Fallback>CN</Avatar.Fallback>
   </Avatar.Root>
   <div class="grid w-full max-w-sm items-center gap-1.5">
-    <Label for="picture">Profile</Label>
-    <Input id="picture" type="file" />
+    <Label for="User">Username</Label>
+    <Input type="text" id="User" placeholder="User" disabled value="64070047"/>
   </div>
   <div class="grid w-full max-w-sm items-center gap-1.5">
-    <Label for="User">Username</Label>
-    <Input type="User" id="User" placeholder="User" />
+    <Label for="User">Email</Label>
+    <Input type="email" id="Email" placeholder="Email" disabled value="64070047@kmitl.ac.th"/>
   </div>
 </div>

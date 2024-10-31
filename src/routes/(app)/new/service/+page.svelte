@@ -2,6 +2,7 @@
   // shadcn-svelte
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
+  import { toast } from "svelte-sonner";
 
   // import components
   import GithubConnect from "$lib/components/custom/create-service/githubConnect.svelte";
@@ -32,21 +33,28 @@
     </Card.Header>
     <Card.Content class="py-10">
       {#if !isSignedInGithub && !isprivateRepo}
-      <GithubConnect bind:isprivateRepo bind:isSignedInGithub/>
-      {:else if (isprivateRepo && !isSignedInGithub) || ((!isprivateRepo && isSignedInGithub) && isSelectRepo)}
-      <FormBuiltApp />
+        <GithubConnect bind:isprivateRepo bind:isSignedInGithub />
+      {:else if (isprivateRepo && !isSignedInGithub) || (!isprivateRepo && isSignedInGithub && isSelectRepo)}
+        <FormBuiltApp />
       {:else if isSignedInGithub || !isprivateRepo}
-      <SelectRepo bind:isSelectRepo/>
+        <SelectRepo bind:isSelectRepo />
       {/if}
     </Card.Content>
     <Card.Footer class="flex justify-between">
-      <Button disabled>Back</Button>
-      {#if isSignedInGithub || isprivateRepo} 
-      <Button on:click={() => {
-        goto("/home/applications")
-      }}>Let Built</Button>
+      <Button
+        on:click={() => {
+          goto("/home/applications");
+        }}>Back</Button
+      >
+      {#if (isprivateRepo && !isSignedInGithub) || (!isprivateRepo && isSignedInGithub && isSelectRepo)}
+        <Button
+          on:click={() => {
+            goto("/home/applications");
+             toast.success("The service has been created")
+          }}>Let Built</Button
+        >
       {:else}
-      <Button disabled>Let Built</Button>
+        <Button disabled>Let Built</Button>
       {/if}
     </Card.Footer>
   </Card.Root>

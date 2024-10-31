@@ -2,6 +2,10 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import { Button } from "$lib/components/ui/button/index.js";
   import { Trash2 } from "lucide-svelte";
+  import EditUserWorkspace from "./dialog-workspaces/edit-user-workspace.svelte";
+  import AlertDeleteUser from "./dialog-workspaces/alert-delete-user.svelte";
+  import AccpetInvite from "./dialog-workspaces/accpet-invite.svelte";
+  import DeleteInvite from "./dialog-workspaces/delete-invite.svelte";
 </script>
 
 <div class="space-y-12">
@@ -19,17 +23,17 @@
     >
       <div class="flex gap-3">
         <Avatar.Root>
-          <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+          <Avatar.Image src="https://github.com/identicons/Phe-nix.png" alt="@shadcn" />
           <Avatar.Fallback>CN</Avatar.Fallback>
         </Avatar.Root>
         <div class="flex flex-col">
-          <p>Name</p>
+          <p>Phe-nix</p>
           <p class="text-muted-foreground text-sm">Owner</p>
         </div>
       </div>
       <div class="flex space-x-4">
-        <Button>Edit</Button>
-        <Button variant="secondary">Delete</Button>
+        <EditUserWorkspace/>
+        <AlertDeleteUser/>
       </div>
     </div>
   </div>
@@ -49,19 +53,17 @@
     >
       <div class="flex gap-3">
         <Avatar.Root>
-          <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+          <Avatar.Image src="https://github.com/identicons/T0NG.png" alt="@shadcn" />
           <Avatar.Fallback>CN</Avatar.Fallback>
         </Avatar.Root>
         <div class="flex flex-col">
-          <p>Name</p>
+          <p>T0NG</p>
           <p class="text-muted-foreground text-sm">@64070011</p>
         </div>
       </div>
       <div class="flex space-x-4">
-        <Button>Accpet</Button>
-        <Button variant="secondary">
-          <Trash2 class="size-5"/>
-        </Button>
+        <AccpetInvite/>
+        <DeleteInvite/>
       </div>
     </div>
   </div>

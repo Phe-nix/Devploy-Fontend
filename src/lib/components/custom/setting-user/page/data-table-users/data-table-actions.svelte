@@ -1,27 +1,19 @@
 <script lang="ts">
   import Ellipsis from "lucide-svelte/icons/ellipsis";
-  import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
-  import { Button } from "$lib/components/ui/button";
+  import * as Popover from "$lib/components/ui/popover";
+  import EditUserDetail from "./edit-user-detail.svelte";
+  import AlertDeleteUser from "./alert-delete-user.svelte";
   export let id: string;
 </script>
 
-<DropdownMenu.Root>
-  <DropdownMenu.Trigger asChild let:builder>
-    <Button
-      variant="ghost"
-      builders={[builder]}
-      size="icon"
-      class="relative h-8 w-8 p-0"
-    >
-      <span class="sr-only">Open menu</span>
-      <Ellipsis class="h-4 w-4" />
-    </Button>
-  </DropdownMenu.Trigger>
-  <DropdownMenu.Content>
-    <DropdownMenu.Group>
-      <DropdownMenu.Label>Actions</DropdownMenu.Label>
-      <DropdownMenu.Item class="text-green-600">Edit</DropdownMenu.Item>
-      <DropdownMenu.Item class="text-red-600">Delete</DropdownMenu.Item>
-    </DropdownMenu.Group>
-  </DropdownMenu.Content>
-</DropdownMenu.Root>
+<Popover.Root>
+  <Popover.Trigger class="rounded-lg">
+    <Ellipsis class="h-4 w-4" />
+  </Popover.Trigger>
+  <Popover.Content class="w-18">
+    <div class="flex flex-col items-center text-center z-40">
+      <EditUserDetail/>
+      <AlertDeleteUser/>
+    </div>
+  </Popover.Content>
+</Popover.Root>

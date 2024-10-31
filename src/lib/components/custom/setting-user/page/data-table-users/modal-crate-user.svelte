@@ -3,14 +3,17 @@
   import * as Dialog from "$lib/components/ui/dialog/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
+  import { toast } from "svelte-sonner";
 
   import { Plus } from "lucide-svelte";
+
+  let dialogOpen = false;
 </script>
 
-<Dialog.Root>
+<Dialog.Root bind:open={dialogOpen}>
   <Dialog.Trigger class={buttonVariants({ variant: "default" })}>
     <div class="flex items-center gap-2">
-      <Plus class="size-5"/>
+      <Plus class="size-5" />
       Create User
     </div>
   </Dialog.Trigger>
@@ -32,7 +35,13 @@
       </div>
     </div>
     <Dialog.Footer>
-      <Button type="submit">Save changes</Button>
+      <Button
+        type="submit"
+        on:click={() => {
+          dialogOpen = false;
+          toast.success("User has been created");
+        }}>Save changes</Button
+      >
     </Dialog.Footer>
   </Dialog.Content>
 </Dialog.Root>

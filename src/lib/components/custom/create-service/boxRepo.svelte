@@ -11,7 +11,7 @@
   class="flex items-center gap-2 border bg-card text-card-foreground shadow-sm rounded-sm p-2 relative"
 >
   <Avatar.Root class="m-1">
-    <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+    <Avatar.Image src="https://github.com/identicons/Phe-nix.png"/>
     <Avatar.Fallback>CN</Avatar.Fallback>
   </Avatar.Root>
   <p>Zela-fontend</p>

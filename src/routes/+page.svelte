@@ -1,13 +1,13 @@
 <script lang="ts">
   // import shadcn-svelte
   import * as Card from "$lib/components/ui/card/index.js";
-  import { Mail } from 'lucide-svelte';
+  import { Mail } from "lucide-svelte";
   import { Button } from "$lib/components/ui/button/index.js";
+  import { toast } from "svelte-sonner";
+  import { goto } from "$app/navigation";
 </script>
 
-<div
-  class="h-full w-full flex flex-col items-center space-y-10 my-48"
->
+<div class="h-full w-full flex flex-col items-center space-y-10 my-48">
   <div class="flex flex-col space-y-10 items-center">
     <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
       LOGO
@@ -19,11 +19,23 @@
   <Card.Root class="p-8 md:p-20">
     <Card.Content>
       <div class="flex flex-col items-center">
-        <Button href="/home/applications" class="my-4 p-[1.5em]">
+        <Button
+          on:click={() => {
+            toast.loading("Loading...");
+
+            setTimeout(() => {
+              goto("/home/applications");
+              toast.success("Login success");
+            }, 5000); // หน่วงเวลา 5 วินาทีก่อนทำงานต่อ
+          }}
+          class="my-4 p-[1.5em]"
+        >
           <Mail class="mr-2 h-4 w-4" />
           Login with @kmitl.ac.th
         </Button>
-        <p class="text-base text-muted-foreground">Please use <span class="font-bold">@KMITL</span> to Sign in</p>
+        <p class="text-base text-muted-foreground">
+          Please use <span class="font-bold">@KMITL</span> to Sign in
+        </p>
       </div>
     </Card.Content>
   </Card.Root>
