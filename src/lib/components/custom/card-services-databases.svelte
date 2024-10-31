@@ -1,6 +1,5 @@
 <script lang="ts">
   // import shadcn-svelte
-  import { Button } from "$lib/components/ui/button/index.js";
   import * as Popover from "$lib/components/ui/popover";
   import * as Avatar from "$lib/components/ui/avatar";
   import { Badge } from "$lib/components/ui/badge";
@@ -9,13 +8,12 @@
   // SVG Icons
   import { Package } from "lucide-svelte";
   import { Ellipsis } from "lucide-svelte";
-  import { PackageMinus } from "lucide-svelte";
-  import { PackageSearch } from "lucide-svelte";
   import { Github } from "lucide-svelte";
   import { goto } from "$app/navigation";
+  import EditServices from "./applications/edit-services.svelte";
+  import AlertDelete from "./applications/alert-delete.svelte";
 
   export let service;
-
 </script>
 
 <div class="relative">
@@ -25,22 +23,10 @@
     >
       <Ellipsis />
     </Popover.Trigger>
-    <Popover.Content class="w-32">
+    <Popover.Content class="w-28">
       <div class="flex flex-col items-center text-center z-40">
-        <Button
-          variant="ghost"
-          class="flex space-x-2 font-semibold text-emerald-700"
-        >
-          <PackageSearch />
-          <p>Edit</p>
-        </Button>
-        <Button
-          variant="ghost"
-          class="flex space-x-2 font-semibold text-destructive"
-        >
-          <PackageMinus />
-          <p>Delete</p>
-        </Button>
+        <EditServices />
+        <AlertDelete/>
       </div>
     </Popover.Content>
   </Popover.Root>
