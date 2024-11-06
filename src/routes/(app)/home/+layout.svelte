@@ -38,7 +38,7 @@
     <h2
       class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
     >
-      Team Name
+      Workspace name
     </h2>
     {#if $page.url.pathname == "/home/applications"}
       <DropdownCreateService type="application"/>

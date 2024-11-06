@@ -19,15 +19,15 @@
 
 	const groups = [
 		{
-			label: "Teams",
+			label: "Workspaces",
 			teams: [
 				{
-					label: "Team 1",
-					value: "team1",
+					label: "Workspace 1",
+					value: "workspace1",
 				},
 				{
-					label: "Team 2",
-					value: "team2",
+					label: "Workspace 2",
+					value: "workspace2",
 				},
 			],
 		},
@@ -75,7 +75,7 @@
 			<Command.Root>
 				<Command.Input class="outline-none" placeholder="Search team..." />
 				<Command.List>
-					<Command.Empty>No team found.</Command.Empty>
+					<Command.Empty>No Workspace found.</Command.Empty>
 					{#each groups as group}
 						<Command.Group heading={group.label}>
 							{#each group.teams as team}
@@ -116,7 +116,7 @@
 							}}
 						>
 							<CirclePlus class="mr-2 h-5 w-5" />
-							Create Team
+							Create Workspace
 						</Command.Item>
 					</Command.Group>
 				</Command.List>
@@ -127,13 +127,13 @@
 		<Dialog.Header>
 			<Dialog.Title>Create team</Dialog.Title>
 			<Dialog.Description>
-				Add a new team to manage products and customers.
+				Add a new workspace to manage products and customers.
 			</Dialog.Description>
 		</Dialog.Header>
 		<div>
 			<div class="space-y-4 py-2 pb-4">
 				<div class="space-y-2">
-					<Label for="name">Team name</Label>
+					<Label for="name">name</Label>
 					<Input id="name" placeholder="Acme Inc." />
 				</div>
 			</div>
