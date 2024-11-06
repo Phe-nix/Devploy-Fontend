@@ -26,7 +26,7 @@
             toast.loading("Loading...");
 
             setTimeout(() => {
-              goto("/home/applications");
+              goto("/home/applications/");
               toast.success("Login success");
             }, 5000); // หน่วงเวลา 5 วินาทีก่อนทำงานต่อ
           }}

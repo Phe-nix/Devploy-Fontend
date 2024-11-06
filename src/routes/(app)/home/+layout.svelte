@@ -40,9 +40,9 @@
     >
       Workspace name
     </h2>
-    {#if $page.url.pathname == "/home/applications"}
+    {#if $page.url.pathname == "/home/applications/"}
       <DropdownCreateService type="application"/>
-    {:else if $page.url.pathname == "/home/databases"}
+    {:else if $page.url.pathname == "/home/databases/"}
     <DropdownCreateService type="database"/>
     {/if}
 
@@ -52,19 +52,19 @@
       <Tabs.Trigger
         value="app"
         on:click={() => {
-          goto("/home/applications");
+          goto("/home/applications/");
         }}>Applications</Tabs.Trigger
       >
       <Tabs.Trigger
         value="database"
         on:click={() => {
-          goto("/home/databases");
+          goto("/home/databases/");
         }}>Databases</Tabs.Trigger
       >
       <Tabs.Trigger
         value="setting"
         on:click={() => {
-          goto("/home/setting");
+          goto("/home/setting/");
         }}>Setting</Tabs.Trigger
       >
     </Tabs.List>
