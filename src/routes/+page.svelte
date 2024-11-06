@@ -5,12 +5,14 @@
   import { Button } from "$lib/components/ui/button/index.js";
   import { toast } from "svelte-sonner";
   import { goto } from "$app/navigation";
+
+  import icon_light from "$lib/assets/icon/light_iron.png"
 </script>
 
 <div class="h-full w-full flex flex-col items-center space-y-10 my-48">
   <div class="flex flex-col space-y-10 items-center">
     <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-      LOGO
+      <img src="{icon_light}" class="size-36" alt="Logo"/>
     </h1>
     <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
       Sign in to Devploy

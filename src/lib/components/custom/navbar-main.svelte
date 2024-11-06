@@ -11,6 +11,7 @@
   // icon
   import { Menu } from "lucide-svelte";
   import { goto } from "$app/navigation";
+  import icon_light from "$lib/assets/icon/light_iron.png"
 </script>
 
 <div
@@ -18,7 +19,9 @@
 >
   <div class="flex flex-row justify-between">
     <div class="flex flex-row items-center space-x-20">
-      <a href="/home/applications" class="text-2xl font-bold">Logo</a>
+      <a href="/home/applications" class="text-2xl font-bold">
+        <img src="{icon_light}" class="size-10" alt="LOGO">
+      </a>
       <Button variant="ghost" class="text-sm font-medium text-muted-foreground"
         >Docs</Button
       >
@@ -52,9 +55,9 @@
           <div
             class="flex flex-col z-50 gap-2 p-2 shadow-lg inset-y-0 left-0 h-full w-3/4 sm:max-w-sm pr-0"
           >
-            <a href="/home" class="text-foreground/60 flex items-center"
-              >Logo Devploy</a
-            >
+            <a href="/home" class="text-foreground/60 flex items-center">
+              <img src="/static/icon/light_iron.png" alt="Logo"/>
+            </a>
             <div
               class="relative overflow-hidden my-4 h-[calc(100vh-8rem)] pb-10 pl-6"
               data-scroll-area-root
