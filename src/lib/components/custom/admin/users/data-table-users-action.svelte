@@ -3,7 +3,7 @@
   import * as Popover from "$lib/components/ui/popover";
   import AdminEditUser from "./dialog-user/admin-edit-user.svelte";
   import AdminDeleteUser from "./dialog-user/admin-delete-user.svelte";
-  export let id: string;
+  // export let id: string;
 </script>
 
 <Popover.Root>
