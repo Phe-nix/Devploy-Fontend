@@ -73,7 +73,7 @@
 		</Popover.Trigger>
 		<Popover.Content class="w-[200px] p-0 outline-none">
 			<Command.Root>
-				<Command.Input class="outline-none" placeholder="Search team..." />
+				<Command.Input class="outline-none" placeholder="Search workspaces..." />
 				<Command.List>
 					<Command.Empty>No Workspace found.</Command.Empty>
 					{#each groups as group}
