@@ -7,8 +7,7 @@
   import { cn } from "$lib/utils.js";
 
   // SVG Icons
-  import { Server } from "lucide-svelte";
-  import { Database } from "lucide-svelte";
+  import { Plus } from 'lucide-svelte';
   import { goto } from "$app/navigation";
 
   let className = '';
@@ -17,18 +16,22 @@
 </script>
 
 {#if type == 'application'}
-<Button on:click={() => {
+<Button size="sm" on:click={() => {
   goto('/new/service')
 }} class={cn("gap-3 font-normal", className)}>
-  <Server class="size-6" />
-  Create Applications
+  <Plus  class="size-6" />
+  <p class="hidden sm:block">
+    Create Applications
+  </p>
 </Button>
 {:else if type == 'database'}
-<Button on:click={() => {
+<Button size="sm" on:click={() => {
   goto('/new/database')
 }} class={cn("gap-3 font-normal", className)}>
-  <Database class="size-6" />
-  Create Databases
+  <Plus class="size-6" />
+  <p class="hidden sm:block">
+    Create Databases
+  </p>
 </Button>
 {:else}
 <div></div>

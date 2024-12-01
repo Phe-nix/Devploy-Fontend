@@ -2,6 +2,7 @@
   // shadcn-svelte
   import * as Card from "$lib/components/ui/card/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
+  import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
 
   // import components
   import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
@@ -17,6 +18,63 @@
         linkGit: "Phe-nix/zela",
         stack: "Svelte",
       },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      {
+        id: "1",
+        name: "Zela-Frontend",
+        time: "21",
+        img: "https://github.com/Phe-nix.png",
+        linkGit: "Phe-nix/zela",
+        stack: "Svelte",
+      },
+      
     ],
     database: [
       {
@@ -49,13 +107,15 @@
         >
           Applications ({services.app.length})
         </h2>
-        <div
-          class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
-        >
-          {#each services.app as service}
-            <CardServicesDatabases {service} />
-          {/each}
-        </div>
+        <ScrollArea class="w-fit h-[25em] xl:h-[34em] md:h-[28em]">
+          <div
+            class="flex flex-row gap-3 flex-wrap items-center justify-center "
+          >
+            {#each services.app as service}
+              <CardServicesDatabases {service} />
+            {/each}
+          </div>
+        </ScrollArea>
       </div>
     {/if}
   </Card.Content>

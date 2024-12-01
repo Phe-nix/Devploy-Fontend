@@ -11,38 +11,18 @@
   import { goto, pushState, replaceState } from "$app/navigation";
   import { page } from "$app/stores";
 
-  let services = {
-    app: [
-      {
-        id: "1",
-        name: "Zela-Frontend",
-        time: "21",
-        img: "https://github.com/Phe-nix.png",
-        linkGit: "Phe-nix/zela",
-        stack: "Svelte",
-      },
-    ],
-    database: [
-      {
-        id: "1",
-        name: "Zela-database",
-        time: "21",
-        stack: "MongoDB",
-      },
-    ],
-  };
 </script>
 
 <div>
   <div class="flex justify-between items-center">
     <h2
-      class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+      class="scroll-m-20 pb-2 text-2xl sm:text-3xl font-semibold tracking-tight transition-colors first:mt-0"
     >
       Workspace name
     </h2>
-    {#if $page.url.pathname == "/home/applications/"}
+    {#if $page.url.pathname == "/home/applications/" || $page.url.pathname == "/home/applications"}
       <DropdownCreateService type="application"/>
-    {:else if $page.url.pathname == "/home/databases/"}
+    {:else if $page.url.pathname == "/home/databases/" || $page.url.pathname == "/home/databases"}
     <DropdownCreateService type="database"/>
     {/if}
 

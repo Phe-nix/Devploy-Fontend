@@ -8,16 +8,16 @@
   export let type = 'project';
 </script>
 
-{#if type === 'project'}
-<div class="flex flex-col items-center space-y-2 py-48">
+{#if type === 'database'}
+<div class="flex flex-col items-center justify-center space-y-2 h-[25em] xl:h-[34em] md:h-[28em]">
   <div class="border bg-card text-card-foreground p-3 rounded-lg shadow-xl">
     <PackageX class="size-8" />
   </div>
-  <div class="text-lg font-semibold">You don't have any project.</div>
-  <p class="text-sm text-muted-foreground">Let start project and create something new.</p>
+  <div class="text-lg font-semibold">You don't have any database.</div>
+  <p class="text-sm text-muted-foreground">Let start database and create something new.</p>
 </div>
 {:else if type === 'service'}
-<div class="flex flex-col items-center space-y-2 py-48">
+<div class="flex flex-col items-center space-y-2 h-[25em] xl:h-[34em] md:h-[28em]">
   <div class="border bg-card text-card-foreground p-3 rounded-lg shadow-xl">
     <Computer class="size-8" />
   </div>

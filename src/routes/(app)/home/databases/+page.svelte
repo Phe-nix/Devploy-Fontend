@@ -2,6 +2,7 @@
   // shadcn-svelte
   import * as Card from "$lib/components/ui/card/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
+  import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
 
   // import components
   import EmptyProjects from "$lib/components/custom/emtpy-projects.svelte";
@@ -40,22 +41,24 @@
     </form>
   </Card.Header>
   <Card.Content>
-    {#if services == undefined}
-      <EmptyProjects type="service" />
+    {#if services.database.length === 0}
+      <EmptyProjects type="database" />
     {:else}
-      <div class="py-4">
+      <div class="my-2">
         <h2
           class="scroll-m-20 pb-4 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
         >
           Databases ({services.database.length})
         </h2>
-        <div
-          class="flex flex-row gap-3 flex-wrap items-center justify-center xl:justify-start"
-        >
-          {#each services.database as service}
-            <CardServicesDatabases {service} />
-          {/each}
-        </div>
+        <ScrollArea class="w-fit h-[25em] xl:h-[34em] md:h-[28em]">
+          <div
+            class="flex flex-row gap-3 flex-wrap items-center justify-center"
+          >
+            {#each services.database as service}
+              <CardServicesDatabases {service} />
+            {/each}
+          </div>
+        </ScrollArea>
       </div>
     {/if}
   </Card.Content>
