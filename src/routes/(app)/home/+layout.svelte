@@ -34,7 +34,7 @@
 </script>
 
 <div>
-  <div class="py-6 flex justify-between items-center">
+  <div class="flex justify-between items-center">
     <h2
       class="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
     >
@@ -47,7 +47,7 @@
     {/if}
 
   </div>
-  <Tabs.Root value="app" class="w-full py-6">
+  <Tabs.Root value="app" class="w-full pt-6">
     <Tabs.List class="grid w-full grid-cols-3">
       <Tabs.Trigger
         value="app"

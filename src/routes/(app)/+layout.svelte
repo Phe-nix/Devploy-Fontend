@@ -5,6 +5,6 @@
 
 <Navbar/>
 
-<div class="max-w-7xl w-full mx-auto px-4">
+<div class="max-w-sm w-full md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto min-h-full">
     <slot/>
 </div>
