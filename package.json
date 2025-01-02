@@ -36,6 +36,7 @@
 	"dependencies": {
 		"clsx": "^2.1.1",
 		"cmdk-sv": "^0.0.17",
+		"motion": "^11.12.0",
 		"tailwind-merge": "^2.4.0",
 		"tailwind-variants": "^0.2.1"
 	}
