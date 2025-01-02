@@ -7,7 +7,7 @@
 <AlertDialog.Root>
   <AlertDialog.Trigger>
     <Button variant="secondary" size="sm" class="hover:text-[hsl(0,72%,51%)]">
-      <p>Delete</p>
+      <p>Kick</p>
     </Button>
   </AlertDialog.Trigger>
   <AlertDialog.Content>

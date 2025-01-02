@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="flex space-x-4">
-        <EditUserWorkspace />
+        <!-- <EditUserWorkspace /> -->
         <AlertDeleteUser />
       </div>
     </div>
